@@ -1,0 +1,12 @@
+{
+  "name": "MyFirstServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
