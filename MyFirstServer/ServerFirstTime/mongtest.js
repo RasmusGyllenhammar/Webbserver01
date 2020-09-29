@@ -10,10 +10,13 @@ db.once('open', function(){
 });
 
 const kittySchema = new mongoose.Schema({
-    name: string
+    name: String,
+    email: String
 });
 
 const kitten = mongoose.model('kitten', kittySchema);
+
+
 
 const silence = new kitten({name: 'Silence'});
 console.log(silence.name); // 'silence'
@@ -36,7 +39,7 @@ fluffy.save(function (err, fluffy){
 kitten.find(function (err, kittens){
     if(err) return console.error(err);
     console.log(kittens);
-})
+});
 
 kitten.find({name: /^fluff/, callback});
 
