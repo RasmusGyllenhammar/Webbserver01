@@ -1,21 +1,3 @@
-const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
-
-const db = mongoose.connection;
-//kollar ifall man har connect
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function(){
- //har connected
-});
-
-const kittySchema = new mongoose.Schema({
-    name: String,
-    email: String
-});
-
-const kitten = mongoose.model('kitten', kittySchema);
-
 
 
 const silence = new kitten({name: 'Silence'});
@@ -43,6 +25,12 @@ kitten.find(function (err, kittens){
 
 kitten.find({name: /^fluff/, callback});
 
-
+exports.storeElement = (element) => {
+   
+   
+    element.save(()=>{
+      console.log("Successfully saved person in database!")
+    })
+}
 
 

@@ -1,4 +1,6 @@
 const express = require('express')
+const PersonModule = require('./Personmodule')
+const dBModule = require('./dBModule')
 const app = express()
 const port = 3001
 
@@ -6,22 +8,6 @@ const clientDir = __dirname + "\\client\\"
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
-
-const db = mongoose.connection;
-//kollar ifall man har connect
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function(){
- //har connected
-});
-
-const personSchema = new mongoose.Schema({
-    name: String,
-    email: String
-});
-
-
-const Person = mongoose.model('person', personSchema);
 //--------------------------------------------------------------
 
 
@@ -41,11 +27,9 @@ app.get('/style', (req, res) => {
 
 app.post('/', function (req, res) {
   //mognooose
-  console.log(req.body.name)
-  console.log(req.body.email)
-  const person = new Person({name: req.body.name, email: req.body.email}); 
-  person.save();
-  
+  //console.log(req.body.name)
+  //console.log(req.body.email)
+  dBModule.StorePerson(PersonModule.createPerson(req.body.name, req.body.email));
   
   res.redirect('/')
 })
