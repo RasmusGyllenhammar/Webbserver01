@@ -25,12 +25,6 @@ kitten.find(function (err, kittens){
 
 kitten.find({name: /^fluff/, callback});
 
-exports.storeElement = (element) => {
-   
-   
-    element.save(()=>{
-      console.log("Successfully saved person in database!")
-    })
-}
+
 
 

@@ -11,7 +11,7 @@ db.once('open', function(){
 
 exports.StorePerson = (input) => {
     input.save(() => {
-        console.log("OJNGOSGO")
+        console.log("kung du kom in")
     })
 
 }

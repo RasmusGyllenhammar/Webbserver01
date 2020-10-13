@@ -26,9 +26,7 @@ app.get('/style', (req, res) => {
 
 
 app.post('/', function (req, res) {
-  //mognooose
-  //console.log(req.body.name)
-  //console.log(req.body.email)
+  
   dBModule.StorePerson(PersonModule.createPerson(req.body.name, req.body.email));
   
   res.redirect('/')
