@@ -9,7 +9,14 @@ db.once('open', function(){
  //har connected
 });
 
-exports.StorePerson = (input) => {
+/**exports.StorePerson = (input) => {
+    input.save(() => {
+        console.log("kung du kom in")
+    })
+
+}**/
+
+exports.Store = (input) => {
     input.save(() => {
         console.log("kung du kom in")
     })

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKUNK</title>
+</head>
+<body>
+    <form action="/messages" method="post">
+        <label for="fname">message:</label><br>
+       
+        <input type="text" id="" name="message"><br>
+       
+        <label for="mail"> mail:</label><br>
+       
+        <input type="email" id="lname" name="email">
+
+        <button type="submit">send</button>
+      </form>
+    
+      <% for( let i = 0; i < messages.length; i++ ) { %>
+            <h1><%- messages[i].message %> </h1>
+      <% } %>
+</body>
+</html>
