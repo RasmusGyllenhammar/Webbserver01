@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>MessageBoard</title>
+</head>
+<body class="indexBody">
+  
+    <header><ul>
+        <li><a class="active" href="">test2</a></li>
+      
+        <li><a href="index">index</a></li>
+        <li><a href="liverpool">liverpool</a></li>
+        <li><a href="">test4</a></li>
+        <li><a href="">test5</a></li>
+    </ul></header>
+    
+    
+    
+
+<h1>Kung din text: <%= message %> </h1>
+
+
+<form action="/index" method="post">
+    <input type="email" name="email" id="">
+<input type="text" name="message">
+<button type="submit">Skicka post</button>
+</form>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Bootstrap Tutorial</h1>
+      <p>Bootstrap is the most popular HTML, CSS...</p>
+    </div>
+  </div>
+
+<div class="classForMessages">
+    <h1>MessageBoard:</h1>
+<!--ändra<% for(let i = 0; i < message.length; i++) { %>
+    <h1> meddelanden: <%= message %>  </h1>
+    <h2> mail: <%= %> </h2>
+<% } %> -->
+<% for( let i = 0; i < message.length; i++ ) { %>
+        <h1> <%= message[i] %>    </h1>
+<% } %>
+
+</div>
+
+
+
+
+
+</body>
+</html>
