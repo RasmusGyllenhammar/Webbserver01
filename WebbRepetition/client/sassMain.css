@@ -1,0 +1,31 @@
+.jumbotron {
+  background-color: rgba(219, 40, 40, 0.774);
+}
+
+.navbar-dark {
+  background-color: rgba(192, 33, 33, 0.61);
+}
+
+.nav-item {
+  font-size: 110%;
+  color: rgba(219, 40, 40, 0.774);
+}
+
+.nav-link {
+  color: rgba(219, 40, 40, 0.774);
+}
+
+.titel-lfc {
+  text-align: center;
+  color: rgba(219, 40, 40, 0.774);
+  background-color: white;
+}
+
+footer {
+  background-color: red;
+}
+
+.form-div {
+  text-align: center;
+}
+/*# sourceMappingURL=sassMain.css.map */

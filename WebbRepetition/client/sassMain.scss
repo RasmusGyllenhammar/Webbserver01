@@ -1,0 +1,32 @@
+@import "./functions";
+@import"./variables";
+.jumbotron{
+    background-color: $red;
+}
+
+.navbar-dark{
+    background-color:rgba(192, 33, 33, 0.61) ;
+
+}
+
+.nav-item{
+    font-size: 110%;
+    color: $red;
+}
+
+.nav-link{
+    color: $red;
+}
+.titel-lfc{
+    text-align: center;
+    color: $red;
+    background-color: white;
+}
+
+footer{
+    background-color: red;
+}
+.form-div{
+   text-align: center;
+
+}

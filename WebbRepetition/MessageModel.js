@@ -16,6 +16,6 @@ exports.createMessage = (inMail, inText) => { // skapar en ny modell med det inn
 }
 //för att skicka ut varje meddelande efter varandra
 exports.getAllMessage = async () => {
-  var allMessageList = await Message.find({})
+  const allMessageList = await Message.find({})
   return allMessageList
 }

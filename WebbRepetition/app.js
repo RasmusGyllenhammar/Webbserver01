@@ -6,7 +6,7 @@ const staticDir = __dirname + '\\client\\'
 const dbModule = require('./dBModule')
 const MessageModel = require('./MessageModel')
 
-const messages = []
+
 
 
 
@@ -23,29 +23,30 @@ app.set('view engine', 'ejs')  //vymotor det som kommer att synas som ejs, dynam
 
 
 app.get('/index', async (req, res) => { // för nya ejs
-  res.render('pages/index.ejs', {message: "meddelande", messageList: messages}) 
+  
   
   let allMessages = await MessageModel.getAllMessage()
-  res.render('pages/index.ejs', {messages : allMessages})
+  res.render('pages/index.ejs', {message : allMessages})
 })
 
 app.post('/index', async (req, res) => { //request och response
- res.render('pages/index.ejs', {message: req.body.message}) //Kommer redirecta en till start sidan efter man skickar meddelande
 
-  const message = MessageModel.createMessage(req.body.email, req.body.message)  
-  dbModule.Store(message) 
-  //FÖR ATT KUNNA SKRIVA UT FLER MEDDELANDEN
-  let messages = await MessageModel.getAllMessage();
-  res.render('pages/index.ejs' , {message : messages})
+  const message = await MessageModel.createMessage(req.body.email, req.body.message)  
+ await dbModule.Store(message) 
+  //FÖR ATT KUNNA SKRIVA UT FLER MEDDELANDEN FUNNKAR EJ
+  const messages = await MessageModel.getAllMessage();
+  res.render('pages/index.ejs' , {message : messages.reverse()})
 })
 
 app.get('/', (req, res) => {
-  res.render('pages/test.ejs')
+
+  res.render('pages/liverpool.ejs')
 })
 
 
-app.get('/liverpool', (req, res) => {
-  res.render('pages/liverpool.ejs')
+app.get('/kungen', (req, res) => {
+
+  res.render('pages/kungen.ejs')
   
 })
 

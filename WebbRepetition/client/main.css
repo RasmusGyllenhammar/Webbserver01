@@ -2,30 +2,9 @@ header {
   background-color: rgba(219, 40, 40, 0.774);
 }
 
-ul {
-  margin-left: 60%;
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
-  font-size: 20px;
-}
 
-ul a {
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.836);
-  padding: 2%;
-}
 
-ul a:hover {
-  background-color: rgba(255, 255, 255, 0.836);
-  font-style: italic;
-  color: rgba(219, 40, 40, 0.774);
-}
-
-li {
-  display: inline;
-}
-
-body {
+.lfcbody {
   background-image: url("stadium.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -44,34 +23,9 @@ body {
   background-color: rgba(219, 40, 40, 0.774);
 }
 
-.bild {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 5%;
-}
 
-.textOne {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.836);
-  background-color: rgba(219, 40, 40, 0.774);
-}
 
-.secondBild {
-  margin-top: 5%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
+
 
 .headerText {
   -webkit-box-pack: center;
@@ -94,22 +48,14 @@ body {
 .classForMessages{
   width: 50%;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
   border-style: solid;
   border-color: red;
+  margin-bottom: 2rem;
+  padding-left: 20px;
 }
 
-footer {
-  background-color: rgba(219, 40, 40, 0.774);
-  margin-top: 1%;
-  text-align: center;
-}
 
-footer h1:hover {
-  background-color: rgba(255, 255, 255, 0.836);
-  font-style: italic;
-  color: rgba(219, 40, 40, 0.774);
-}
 .jumbotron{
   background-color: black;
 }
