@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="sassMain.css">
+
+    <script defer src="../../socket.io/socket.io.js"></script>
+   
+    <script defer src="../../script.js"></script>
+
 </head>
-<body>
+<body class="lfcbody">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <!-- Brand/logo -->
         <a class="navbar-brand" href="/"> <img src="lfclogo.svg" style="width: 3%;"></a>
@@ -27,6 +32,84 @@
         </ul>
       </nav>
     <h1>HEJ</h1>
+
+    
+<div id="message-container"></div>
+<form id="send-container" action="">
+     <input type="text" id="message-input"> 
+     <button type="submit" id="send-button">SKICKA</button>
+</form>
+
+<div class="container">
+    <img src="mane.gif" alt="">
+</div>
+
+    <!-- Footer -->
+ <footer class="navbar-dark text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Liverpool</h5>
+
+              <p>
+                  <img src="lfclogo.svg" width="20%">
+              </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Sociala medier</h5>
+
+              <ul class="list-unstyled mb-0">
+                  <li>
+                      <a href="#!" class="text-dark">Instagram</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Facebook</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">Youtube</a>
+                  </li>
+
+              </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0">länkar</h5>
+
+              <ul class="list-unstyled">
+                  <li>
+                      <a href="#!" class="text-dark">spel schema</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">CL</a>
+                  </li>
+                  <li>
+                      <a href="#!" class="text-dark">SKyttekung</a>
+                  </li>
+
+              </ul>
+          </div>
+          <!--Grid column-->
+      </div>
+      <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2020 Copyright:
+      <a class="text-dark" href="#">IBK UTBY EMPIRE</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

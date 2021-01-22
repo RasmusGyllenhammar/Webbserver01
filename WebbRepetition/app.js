@@ -1,4 +1,5 @@
 const express = require('express')
+const { isValidObjectId } = require('mongoose')
 const app = express() //objekt av express, instans
 const port = 3000
 const staticDir = __dirname + '\\client\\'
@@ -21,6 +22,20 @@ app.set('view engine', 'ejs')  //vymotor det som kommer att synas som ejs, dynam
 
 
 
+const server = require('http')
+const io = require('socket.io')(server)
+
+io.on('connection', socket => {
+  
+  socket.emit('chat-message', 'hello world')
+  socket.on('send-chat-message', message => {
+    socket.broadcast.emit('chat-message', message)
+  })
+})
+
+
+
+
 
 app.get('/index', async (req, res) => { // för nya ejs
   
@@ -40,13 +55,13 @@ app.post('/index', async (req, res) => { //request och response
 
 app.get('/', (req, res) => {
 
-  res.render('pages/liverpool.ejs')
+  res.render('pages/kungen.ejs')
 })
 
 
 app.get('/kungen', (req, res) => {
 
-  res.render('pages/kungen.ejs')
+  res.render('pages/liverpool.ejs')
   
 })
 

@@ -30,3 +30,21 @@ footer{
    text-align: center;
 
 }
+.message-form{
+    width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  border-style: solid;
+  border-color: red;
+  margin-bottom: 2rem;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 500px){
+    .message-form{
+        width: 100%;
+    }
+    .classForMessages{
+        width: 100%;
+    }
+}
